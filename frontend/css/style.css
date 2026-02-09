@@ -1,0 +1,446 @@
+/* =====================
+   RESET & BASE
+===================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+    background: #f5f7fb;
+    color: #111827;
+}
+
+/* =====================
+   COMMON UTILITIES
+===================== */
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+.hidden {
+    display: none;
+}
+
+.muted {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+/* =====================
+   BUTTONS
+===================== */
+
+.btn {
+    border: none;
+    border-radius: 10px;
+    padding: 10px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn.primary {
+    background: #4f46e5;
+    color: white;
+}
+
+.btn.secondary {
+    background: #e5e7eb;
+    color: #111827;
+}
+
+.btn.ghost {
+    background: transparent;
+    color: #4f46e5;
+}
+
+.btn.small {
+    padding: 8px 12px;
+    font-size: 13px;
+}
+
+.btn.full {
+    width: 100%;
+}
+
+/* =====================
+   HEADER
+===================== */
+
+.header {
+    height: 64px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 18px;
+}
+
+/* =====================
+   AUTH PAGES (Login / Signup / Index)
+===================== */
+
+.tagline {
+    margin: 10px 0 20px;
+    color: #6b7280;
+    text-align: center;
+}
+
+.actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+/* Inputs */
+
+.input-group {
+    margin-bottom: 14px;
+}
+
+.input-group label {
+    font-size: 13px;
+    margin-bottom: 4px;
+    display: block;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+}
+
+/* Footer text */
+
+.footer-text {
+    margin-top: 16px;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* =====================
+   DASHBOARD LAYOUT
+===================== */
+
+.dashboard {
+    padding: 30px 40px;
+    display: grid;
+    gap: 24px;
+}
+
+/* Month banner */
+
+.month-banner {
+    background: linear-gradient(135deg, #6366f1, #4f46e5);
+    color: white;
+    padding: 24px;
+    border-radius: 16px;
+}
+
+.month-banner p {
+    opacity: 0.9;
+    margin-top: 6px;
+}
+
+/* Card header */
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.add-task-box {
+    display: flex;
+    gap: 8px;
+}
+
+.add-task-box input {
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+}
+
+/* =====================
+   TABLE (DAILY HABITS)
+===================== */
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.task-table {
+    border-collapse: collapse;
+    width: 100%;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.task-table th,
+.task-table td {
+    padding: 8px;
+    border: 1px solid #e5e7eb;
+    text-align: center;
+    font-size: 13px;
+}
+
+.task-table th {
+    background: #f3f4f6;
+    font-weight: 600;
+}
+
+.task-name {
+    text-align: left;
+    padding-left: 12px;
+}
+
+/* =====================
+   GOALS
+===================== */
+
+.goals-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.add-goal-box {
+    margin-top: 12px;
+    display: flex;
+    gap: 8px;
+}
+
+.add-goal-box input {
+    flex: 1;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+}
+
+.goal-item {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+/* =====================
+   REPORT PAGE (Selector)
+===================== */
+
+.page-title {
+    font-size: 22px;
+    margin-bottom: 16px;
+}
+
+.report-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.report-card {
+    background: white;
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.report-card:hover {
+    transform: translateY(-4px);
+}
+
+.report-card p {
+    margin-top: 8px;
+    color: #6b7280;
+}
+
+/* =====================
+   MODAL
+===================== */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    align-items: center;
+    justify-content: center;
+}
+
+/* Modal visible state */
+.modal:not(.hidden) {
+    display: flex;
+}
+
+
+.modal-content {
+    background: white;
+    padding: 24px;
+    border-radius: 16px;
+    width: 320px;
+}
+
+.modal-form {
+    display: flex;
+    gap: 8px;
+    margin: 16px 0;
+}
+
+.modal-form select {
+    flex: 1;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+/* =====================
+   REPORT VIEW PAGE
+===================== */
+
+.overall-card {
+    max-width: 220px;
+}
+
+.overall-percentage {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 6px 0;
+}
+
+.task-report-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.task-card {
+    background: white;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    cursor: pointer;
+}
+.goal-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.goal-item-report {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+}
+
+.goal-item-report.done {
+    color: #16a34a; /* green */
+}
+
+.goal-item-report.not-done {
+    color: #dc2626; /* red */
+}
+/* ===== TASK REPORT PAGE ===== */
+
+.task-dashboard {
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.task-header {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.task-charts {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 24px;
+    align-items: start;
+}
+
+@media (max-width: 900px) {
+    .task-charts {
+        grid-template-columns: 1fr;
+    }
+}
+/* ===== GLOBAL NAVIGATION ===== */
+
+.nav-links {
+    display: flex;
+    gap: 16px;
+    margin-right: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 14px;
+    color: #374151;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: background 0.2s ease;
+}
+
+.nav-link:hover {
+    background: #eef2ff;
+    color: #4338ca;
+}
+/* ===== REPORT VIEW FIX ===== */
+
+.task-report-cards,
+#taskList {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.task-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.task-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}

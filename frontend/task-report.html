@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task Report | StreakFlow</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">StreakFlow</div>
+
+    <nav class="nav-links">
+        <a href="dashboard.html" class="nav-link">🧭 Planner</a>
+        <a href="report.html" class="nav-link">📊 Insights</a>
+    </nav>
+
+    <button class="btn secondary" id="backToReportView">Back</button>
+</header>
+
+
+<main class="task-dashboard">
+
+    <div class="task-header">
+        <h2 id="taskTitle">Task</h2>
+        <p class="muted" id="taskMeta"></p>
+    </div>
+
+    <div class="task-charts">
+        <div class="card">
+            <h3>Completion Overview</h3>
+            <canvas id="taskPieChart" width="260" height="260"></canvas>
+        </div>
+
+        <div class="card">
+            <h3>Day-wise Progress</h3>
+            <canvas id="taskLineChart" height="80"></canvas>
+        </div>
+    </div>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+
+</html>

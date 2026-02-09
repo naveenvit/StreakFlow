@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard | StreakFlow</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">StreakFlow</div>
+
+    <nav class="nav-links">
+        <a href="dashboard.html" class="nav-link">🧭 Planner</a>
+        <a href="report.html" class="nav-link">📊 Insights</a>
+    </nav>
+
+    <button id="logoutBtn" class="btn secondary">Logout</button>
+
+</header>
+
+
+<main class="dashboard">
+
+    <!-- Month -->
+    <div class="month-banner">
+        <h2 id="currentMonth"></h2>
+        <p>Track your consistency, one day at a time</p>
+    </div>
+
+    <!-- Tasks -->
+    <div class="card">
+        <div class="card-header">
+            <h3>Daily Habit Tracker</h3>
+
+            <div class="add-task-box">
+                <input id="taskInput" type="text" placeholder="New habit name">
+                <button id="addTaskBtn" class="btn primary small">Add</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-wrapper">
+        <table class="task-table">
+            <thead>
+                <tr id="weekRow">
+                    <th>Week</th>
+                </tr>
+                <tr id="dayRow">
+                    <th>Day</th>
+                </tr>
+                <tr id="daysRow">
+                    <th>Habit</th>
+                </tr>
+            </thead>
+            <tbody id="taskBody">
+                <!-- Tasks will be added here dynamically -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Goals -->
+    <div class="goals-grid">
+
+        <!-- Weekly -->
+        <div class="card" id="weeklyGoals">
+            <h3>Weekly Goals</h3>
+
+            <!-- goals will appear here -->
+            <div id="weeklyGoalsList"></div>
+
+            <div class="add-goal-box">
+                <input id="weeklyGoalInput" type="text" placeholder="New weekly goal">
+                <button id="addWeeklyGoal" class="btn ghost">Add</button>
+            </div>
+        </div>
+        
+        <!-- Monthly -->
+        <div class="card" id="monthlyGoals">
+            <h3>Monthly Goals</h3>
+
+            <!-- monthly goals will appear here -->
+            <div id="monthlyGoalsList"></div>
+
+            <div class="add-goal-box">
+                <input id="monthlyGoalInput" type="text" placeholder="New monthly goal">
+                <button id="addMonthlyGoal" class="btn ghost">Add</button>
+            </div>
+        </div>
+    </div>
+
+</main>
+<script src="js/app.js"></script>
+</body>
+</html>

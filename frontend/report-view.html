@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Report Overview | StreakFlow</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">StreakFlow</div>
+
+    <nav class="nav-links">
+        <a href="dashboard.html" class="nav-link">🧭 Planner</a>
+        <a href="report.html" class="nav-link">📊 Insights</a>
+    </nav>
+
+    <a href="report.html" class="btn secondary">Back</a>
+</header>
+
+
+<main class="dashboard">
+
+    <!-- Overall Success -->
+    <div class="card overall-card">
+        <h3>Overall Success</h3>
+        <div class="overall-percentage">
+            <span id="overallPercent">--%</span>
+        </div>
+        <p class="muted">Based on all tasks</p>
+    </div>
+
+    <!-- Task List -->
+    <div class="card">
+        <h3>Task-wise Progress</h3>
+
+        <div class="goal-list" id="taskList">
+            <!-- Task cards will be injected here later -->
+
+            <!-- Placeholder example -->
+            <div class="task-card">
+                <h4>Task Name</h4>
+                <p>Completion: --%</p>
+            </div>
+
+        </div>
+    </div>
+
+</main>
+
+<script src="js/app.js"></script>
+</body>
+</html>

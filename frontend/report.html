@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reports | StreakFlow</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">StreakFlow</div>
+
+    <nav class="nav-links">
+        <a href="dashboard.html" class="nav-link">🧭 Planner</a>
+        <a href="report.html" class="nav-link">📊 Insights</a>
+    </nav>
+
+    <a href="dashboard.html" class="btn secondary">Back</a>
+</header>
+
+
+<main class="dashboard">
+
+    <h2 class="page-title">Reports</h2>
+
+    <!-- Report Cards -->
+    <div class="report-cards">
+
+        <div class="report-card" data-type="daily">
+            <h3>📅 Daily Report</h3>
+            <p>Track day-wise habit completion</p>
+        </div>
+
+        <div class="report-card" data-type="weekly">
+            <h3>📊 Weekly Report</h3>
+            <p>Analyze weekly goal consistency</p>
+        </div>
+
+        <div class="report-card" data-type="monthly">
+            <h3>📈 Monthly Report</h3>
+            <p>Analyze your monthly goal progress</p>
+        </div>
+
+    </div>
+
+</main>
+<!-- Task List View -->
+<div class="task-report hidden" id="taskReportView">
+    <h2 id="taskReportTitle"></h2>
+
+    <div class="task-report-cards" id="taskReportCards">
+        <!-- task cards will be injected here -->
+    </div>
+
+    <div class="task-report-actions">
+        <button class="btn secondary" id="backToReports">Back to Reports</button>
+    </div>
+
+</div>
+
+<!-- Modal -->
+<div class="modal hidden" id="reportModal">
+    <div class="modal-content">
+        <h3 id="modalTitle">Generate Report</h3>
+
+        <div class="modal-form">
+            <select id="modalMonth"></select>
+            <select id="modalYear"></select>
+        </div>
+
+        <div class="modal-actions">
+            <button class="btn secondary" id="closeModal">Cancel</button>
+            <button id="viewReportBtn" class="btn primary">View Report</button>
+        </div>
+    </div>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
