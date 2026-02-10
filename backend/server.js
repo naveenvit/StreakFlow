@@ -21,7 +21,10 @@ app.use("/api/reports", reportRoutes);
 
 // Connect DB
 connectDB();
-
+app.use(cors({
+  origin: "*", // for now (safe for small project)
+  credentials: true
+}));
 // Test route
 app.get("/", (req, res) => {
     res.send("StreakFlow Backend is running 🚀");
