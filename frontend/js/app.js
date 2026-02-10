@@ -1,10 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const API_BASE_URL =
-        window.location.hostname === "localhost" ||
-        window.location.hostname === "127.0.0.1"
-            ? "https://streakflow-backend-uagq.onrender.com"
-            : "https://streakflow-backend-uagq.onrender.com";
-
 
     // ================= AUTH GUARD =================
 
