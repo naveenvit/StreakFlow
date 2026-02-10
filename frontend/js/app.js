@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const API_BASE_URL =
         window.location.hostname === "localhost" ||
         window.location.hostname === "127.0.0.1"
-            ? "http://localhost:5000"
+            ? "https://streakflow-backend-uagq.onrender.com"
             : "https://streakflow-backend-uagq.onrender.com";
 
 
@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const year = today.getFullYear();
 
                 const res = await fetch(
-                    `http://localhost:5000/api/goals?type=weekly&month=${month}&year=${year}`,
+                    `https://streakflow-backend-uagq.onrender.com/api/goals?type=weekly&month=${month}&year=${year}`,
                     {
                         headers: getAuthHeaders()
                     }
@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 console.log("Weekly checkbox clicked:", checkbox.checked);
                 try {
                     await fetch(
-                        `http://localhost:5000/api/goals/${goal._id}`,
+                        `https://streakflow-backend-uagq.onrender.com/api/goals/${goal._id}`,
                         {
                             method: "PATCH",
                             headers: getAuthHeaders(),
@@ -157,7 +157,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const month = today.getMonth() + 1;
                 const year = today.getFullYear();
 
-                await fetch(`${API_BASE_URL}/api/goals`, {
+                await fetch(`$https://streakflow-backend-uagq.onrender.com/api/goals`, {
                     method: "POST",
                     headers: getAuthHeaders(),
                     body: JSON.stringify({
@@ -189,7 +189,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const year = today.getFullYear();
 
                 const res = await fetch(
-                    `http://localhost:5000/api/goals?type=monthly&month=${month}&year=${year}`,
+                    `https://streakflow-backend-uagq.onrender.com/api/goals?type=monthly&month=${month}&year=${year}`,
                     {
                         headers: getAuthHeaders()
                     }
@@ -218,7 +218,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 try {
                     await fetch(
-                        `http://localhost:5000/api/goals/${goal._id}`,
+                        `https://streakflow-backend-uagq.onrender.com/api/goals/${goal._id}`,
                         {
                             method: "PATCH",
                             headers: getAuthHeaders(),
@@ -248,7 +248,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const month = today.getMonth() + 1;
                 const year = today.getFullYear();
 
-                await fetch(`${API_BASE_URL}/api/goals`, {
+                await fetch(`$https://streakflow-backend-uagq.onrender.com/api/goals`, {
                     method: "POST",
                     headers: getAuthHeaders(),
                     body: JSON.stringify({
@@ -365,7 +365,7 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log("✅ DAILY REPORT CODE RUNNING");
 
             fetch(
-                `http://localhost:5000/api/reports/daily?month=${apiMonth}&year=${year}`,
+                `https://streakflow-backend-uagq.onrender.com/api/reports/daily?month=${apiMonth}&year=${year}`,
                 { headers: getAuthHeaders() }
             )
                 .then(res => res.json())
@@ -407,7 +407,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (reportType === "weekly") {
 
             fetch(
-                `http://localhost:5000/api/goals?type=weekly&month=${apiMonth}&year=${year}`,
+                `https://streakflow-backend-uagq.onrender.com/api/goals?type=weekly&month=${apiMonth}&year=${year}`,
                 { headers: getAuthHeaders() }
             )
                 .then(res => res.json())
@@ -449,7 +449,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (reportType === "monthly") {
 
             fetch(
-                `http://localhost:5000/api/goals?type=monthly&month=${apiMonth}&year=${year}`,
+                `https://streakflow-backend-uagq.onrender.com/api/goals?type=monthly&month=${apiMonth}&year=${year}`,
                 { headers: getAuthHeaders() }
             )
                 .then(res => res.json())
@@ -532,7 +532,7 @@ document.addEventListener("DOMContentLoaded", () => {
         ];
 
         // Fetch single task
-        fetch(`http://localhost:5000/api/tasks/${taskId}`, {
+        fetch(`https://streakflow-backend-uagq.onrender.com/api/tasks/${taskId}`, {
             headers: getAuthHeaders()
         })
             .then(res => res.json())
@@ -612,7 +612,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const password = document.getElementById("loginPassword").value;
 
                 try {
-                    const res = await fetch(`${API_BASE_URL}/api/auth/login`, {
+                    const res = await fetch(`$https://streakflow-backend-uagq.onrender.com/api/auth/login`, {
                         method: "POST",
                         headers: { "Content-Type": "application/json" },
                         body: JSON.stringify({ email, password })
@@ -656,7 +656,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
 
                 try {
-                    const res = await fetch(`${API_BASE_URL}/api/auth/signup`, {
+                    const res = await fetch(`$https://streakflow-backend-uagq.onrender.com/api/auth/signup`, {
                         method: "POST",
                         headers: { "Content-Type": "application/json" },
                         body: JSON.stringify({ email, password })
@@ -697,7 +697,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const year = today.getFullYear();
 
             const res = await fetch(
-                `http://localhost:5000/api/tasks?month=${month}&year=${year}`,
+                `https://streakflow-backend-uagq.onrender.com/api/tasks?month=${month}&year=${year}`,
                 {
                     headers: getAuthHeaders()
                 }
@@ -752,7 +752,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     try {
                         await fetch(
-                            `http://localhost:5000/api/tasks/${task._id}`,
+                            `https://streakflow-backend-uagq.onrender.com/api/tasks/${task._id}`,
                             {
                                 method: "PATCH",
                                 headers: getAuthHeaders(),
@@ -792,7 +792,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const month = today.getMonth() + 1;
                 const year = today.getFullYear();
 
-                await fetch(`${API_BASE_URL}/api/tasks`, {
+                await fetch(`$https://streakflow-backend-uagq.onrender.com/api/tasks`, {
                     method: "POST",
                     headers: getAuthHeaders(),
                     body: JSON.stringify({
