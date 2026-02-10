@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-
+    console.log("🔥 APP.JS LOADED ON", window.location.href);
     // ================= AUTH GUARD =================
 
     function requireAuth() {
