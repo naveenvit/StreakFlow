@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
         window.location.hostname === "localhost" ||
         window.location.hostname === "127.0.0.1"
             ? "http://localhost:5000"
-            : "https://YOUR_RENDER_BACKEND_URL";
+            : "https://streakflow-backend-uagq.onrender.com";
 
 
     // ================= AUTH GUARD =================
