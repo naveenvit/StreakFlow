@@ -815,3 +815,4 @@ if (logoutBtn) {
         localStorage.removeItem("streakflow_token");
         window.location.href = "login.html";
     });
+}
