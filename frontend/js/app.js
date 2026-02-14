@@ -633,7 +633,8 @@ if (window.location.pathname.includes("login.html")) {
 if (window.location.pathname.includes("signup.html")) {
 
     const signupForm = document.getElementById("signupForm");
-
+    console.log("signupForm element:", signupForm);
+    console.log("loginForm element:", document.getElementById("loginForm"));
     if (signupForm) {
         signupForm.addEventListener("submit", async (e) => {
             e.preventDefault();
