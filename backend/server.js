@@ -21,6 +21,11 @@ app.use('/api/habits', habitRoutes);
 app.use('/api/goals', goalRoutes);
 app.use('/api/analytics', analyticsRoutes);
 
+// Base route for testing
+app.get('/', (req, res) => {
+    res.send('StreakFlow API is running properly. The frontend is connected!');
+});
+
 // Database connection
 const PORT = process.env.PORT || 5000;
 const MONGO_URI = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/streakflow';
